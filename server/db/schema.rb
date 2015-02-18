@@ -11,7 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150218214321) do
+ActiveRecord::Schema.define(version: 20150218220309) do
+
+  create_table "attractions", force: :cascade do |t|
+    t.string   "name",         limit: 255
+    t.string   "city",         limit: 255
+    t.string   "tag",          limit: 255
+    t.string   "cost",         limit: 255
+    t.integer  "rating",       limit: 4
+    t.text     "comment",      limit: 65535
+    t.string   "address",      limit: 255
+    t.string   "phone_number", limit: 255
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  create_table "hotels", force: :cascade do |t|
+    t.string   "name",         limit: 255
+    t.string   "city",         limit: 255
+    t.string   "tag",          limit: 255
+    t.string   "cost",         limit: 255
+    t.text     "comment",      limit: 65535
+    t.integer  "rating",       limit: 4
+    t.string   "address",      limit: 255
+    t.string   "phone_number", limit: 255
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  create_table "restaurants", force: :cascade do |t|
+    t.string   "name",         limit: 255
+    t.string   "city",         limit: 255
+    t.string   "tag",          limit: 255
+    t.string   "cost",         limit: 255
+    t.text     "comment",      limit: 65535
+    t.integer  "rating",       limit: 4
+    t.string   "address",      limit: 255
+    t.string   "phone_number", limit: 255
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
 
   create_table "states", force: :cascade do |t|
     t.string   "name",       limit: 255
