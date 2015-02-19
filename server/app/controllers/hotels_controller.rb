@@ -11,7 +11,6 @@ class HotelsController < ApplicationController
       :rating,
       :address,
       :phone_number,
-      state_id: []
     )
   end
 end
