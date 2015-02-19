@@ -1,8 +1,8 @@
 class AttractionsController < ApplicationController
   private
 
-  def attract_params
-    params.require(:attractions).permit(
+  def attraction_params
+    params.require(:attraction).permit(
       :name,
       :city,
       :tag,
@@ -11,7 +11,6 @@ class AttractionsController < ApplicationController
       :comment,
       :address,
       :phone_number,
-      state_id: []
     )
   end
 end
