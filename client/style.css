@@ -1,0 +1,243 @@
+@font-face {
+    font-family:"Pacifico";
+    src: url("./fonts/Pacifico.ttf");
+}
+
+body {
+    background-color: rgb(154, 173, 189);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.grandma {
+    height: 157px;
+    position: absolute;
+    left: 430px;
+}
+.territory-west, .territory-northeast, .territory-ksmo, .territory-southeast {
+    fill: rgb(192, 89, 73);
+
+
+}
+
+.territory-west:hover, .territory-northeast:hover, .territory-ksmo:hover, .territory-southeast:hover{
+    fill: rgb(203, 187, 88);
+
+}
+
+.wrapper1 {
+    margin-top: -50px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+.header {
+    background-color: rgb(117, 58, 72);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 120px;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+
+
+}
+.title {
+    color: rgb(238, 237, 231);
+    font-family: 'Pacifico';
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 0px -2px rgba(0, 0, 0, 0.94);
+}
+.slogan {
+    color: rgb(238, 237, 231);
+    font-family: ;
+    text-align: center;
+    font-size: 12px;
+    text-shadow: 0px -2px rgba(0, 0, 0, 0.94);
+    margin-top: 4px;
+    font-weight:bold;
+
+}
+.log-in-button {
+    border:0;
+    outline:none;
+    border-radius:0;
+    padding:15px 5px;
+    font-size:1rem;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    background: rgb(203, 187, 88);
+    color: white;
+    cursor:pointer;
+    margin: 10px 0;
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    border-radius: 10px;
+    text-shadow: 0px -2px rgb(0, 0, 0);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#loog {
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 0;
+    max-width: 600px;
+}
+
+a {
+    text-decoration:none;
+    color:white;
+    transition:.5s ease;
+}
+
+li {
+    display: inline-block;
+    width: 49%%;
+}
+
+.form {
+    background-color: rgb(15, 89, 89);
+    padding: 40px;
+    max-width:600px;
+    margin:40px auto;
+    border-radius:3px;
+    box-shadow:0 4px 10px 4px;
+    transition:.5s ease;
+
+}
+
+.tabs {
+    list-style:none;
+    padding:0;
+    margin:0 0 10px 0;
+    display: block;
+    clear: both;
+}
+
+li a {
+    display:block;
+    text-decoration:none;
+    padding:15px 0;
+    background-color: #6b7c84;
+    color: lightgrey;
+    font-size:1rem;
+    float:left;
+    width:100%%;
+    text-align:center;
+    cursor:pointer;
+    transition:.5s ease;
+
+
+}
+
+.active a {
+    color: white;
+    background-color: rgb(23, 166, 151);
+}
+
+.button {
+    border:0;
+    outline:none;
+    border-radius:0;
+    padding:15px 0;
+    font-size:2rem;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    background: rgb(23, 166, 151);
+    color: white;
+    transition:all.5s ease;
+    -webkit-appearance: none;
+    cursor:pointer;
+    margin: 10px 0;
+
+}
+.button-block {
+    display:block;
+    width:100%;
+}
+
+input, textarea {
+    font-size:22px;
+    display:block;
+    width:96.5%;
+    height:100%;
+    padding:5px 0 5px 10px;
+    background:none;
+    background-image:none;
+    border:1px solid lightgray;
+    color:white;
+    border-radius:0;
+    transition:.5s ease;
+    margin: 10px 0;
+}
+
+
+#firstname, #lastname {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 5px 0 5px 5px;
+}
+
+#firstname {
+    float: left;
+    width: 48%;
+    margin-right: 5px;
+
+}
+
+#lastname {
+    float: left;
+    width: 47%;
+}
+
+.hide {
+    display: none;
+}
+.blur {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+}

@@ -1,0 +1,71 @@
+.wrapper2 {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.border {
+    position: relative;
+    background: none;
+    height: 400px;
+    width: 300px;
+    border: 0px solid transparent;
+    overflow: hidden;
+}
+
+.border:before {
+    content: "";
+    position: absolute;
+    background-image: url("http://fillmurray.com/200/300");
+    background-size: cover;    height: 400px;
+    width: 300px;
+    z-index: -2;
+}
+
+
+.frame {
+    position: absolute;
+    background: none;
+    height: 395px;
+    width: 300px;
+    border: 20px solid rgb(117, 58, 72);
+    border-radius: 60px 60px 60px 60px;
+    margin: -20px 0 0 -20px;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.header2 {
+    position: relative;
+    display: table;
+    background: #eeede7;
+    height: 80px;
+    width: 300px;
+    z-index: -1;
+}
+
+.header2 h1 {
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'Ubuntu', arial, sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 10px;
+    color: rgb(117, 58, 72);
+}
+
+.container2 {
+    display: flex;
+    flex-flow: wrap;
+    height: 1000px;
+    margin-top: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.hotels, .attractions, .restaurants {
+    flex: 1;
+    height: 395px;
+    margin: 10px;
+    padding: 25px;
+
+}
