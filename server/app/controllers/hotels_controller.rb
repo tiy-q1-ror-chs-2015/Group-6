@@ -1,9 +1,8 @@
 class HotelsController < ApplicationController
- def show
-  @state = State.find params[:state_id]
-  @hotel = Hotel.find params[:id]
+  def show
+    @state = State.find_by_slug(params[:state_id])
+    @hotel = Hotel.find params[:id]
   end
-  private
 
   def index
     @state = State.find_by_slug(params[:state_id])
@@ -14,7 +13,7 @@ class HotelsController < ApplicationController
   end
 
   def create
-    @state = State.find params[:state_id]
+    @state = State.find_by_slug(params[:state_id])
     @hotel = @state.hotels.new hotel_params
     if @hotel.save
       respond_to do |format|

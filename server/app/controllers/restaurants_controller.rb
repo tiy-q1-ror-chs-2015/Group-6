@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
   def show
-  @state = State.find params[:state_id]
-  @restaurant = Restaurant.find params[:id]
+    @state = State.find_by_slug(params[:state_id])
+    @restaurant = Restaurant.find params[:id]
   end
 
   def index
@@ -13,7 +13,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    @state = State.find params[:state_id]
+    @state = State.find_by_slug(params[:state_id])
     @restaurant = @state.restaurants.new restaurant_params
     if @restaurant.save
       respond_to do |format|

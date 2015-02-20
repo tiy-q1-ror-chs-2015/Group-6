@@ -2,7 +2,7 @@ class StatesController < ApplicationController
   def index
     @states = State.all
     respond_to do |format|
-      format.json { render json: @states }
+      format.json { render json: @states.to_json }
     end
   end
 
@@ -10,7 +10,7 @@ class StatesController < ApplicationController
     @state = State.find_by_slug(params[:id])
     respond_to do |format|
       format.html
-      format.json { render json: @state }
+      format.json { render json: @state.to_json }
     end
   end
 
