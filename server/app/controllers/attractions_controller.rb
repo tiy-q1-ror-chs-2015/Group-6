@@ -1,7 +1,7 @@
 class AttractionsController < ApplicationController
 
   def index
-    @state = State.find params[:state_id]
+    @state = State.find_by_slug(params[:state_id])
     @attractions = @state.attractions
     respond_to do |format|
       format.json { render json: @state.attractions.to_json }
