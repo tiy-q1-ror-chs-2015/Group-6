@@ -1,5 +1,8 @@
 class RestaurantsController < ApplicationController
-
+  def show
+  @state = State.find params[:state_id]
+  @restaurant = Restaurant.find params[:id]
+  end
 
   private
   def restaurant_params

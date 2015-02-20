@@ -1,4 +1,9 @@
 class AttractionsController < ApplicationController
+  
+ def show
+  @state = State.find params[:state_id]
+  @attraction = Attraction.find params[:id]
+  end
   private
 
   def attraction_params
