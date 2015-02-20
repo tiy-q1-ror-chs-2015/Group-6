@@ -1,4 +1,9 @@
 class HotelsController < ApplicationController
+ def show
+  @state = State.find params[:state_id]
+  @hotel = Hotel.find params[:id]
+  end
+  private
 
   def index
     @state = State.find_by_slug(params[:state_id])

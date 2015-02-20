@@ -1,4 +1,8 @@
 class RestaurantsController < ApplicationController
+  def show
+  @state = State.find params[:state_id]
+  @restaurant = Restaurant.find params[:id]
+  end
 
   def index
     @state = State.find_by_slug(params[:state_id])
@@ -35,7 +39,6 @@ class RestaurantsController < ApplicationController
     end
   end
   
-
 
   private
   def restaurant_params
