@@ -1,21 +1,20 @@
 class AttractionsController < ApplicationController
+  before_action :set_state
 
   
   def show
-    @state = State.find_by_slug(params[:state_id])
     @attraction = Attraction.find params[:id]
   end
 
   def index
-    @state = State.find_by_slug(params[:state_id])
     @attractions = @state.attractions
+    @jsonarray = ["Attractions", @state.attractions.as_json]
     respond_to do |format|
-      format.json { render json: @state.attractions.to_json }
+      format.json { render json: JSON.pretty_generate(@jsonarray) }
     end
   end
 
   def create
-    @state = State.find_by_slug(params[:state_id])
     @attraction = @state.attractions.new attraction_params
     if @attraction.save
       respond_to do |format|
@@ -39,6 +38,10 @@ class AttractionsController < ApplicationController
         format.json { render json: @attraction.errors.full_messages, status: 422}
       end
     end
+  end
+
+  def set_state
+    @state = State.find_by_slug(params[:state_id])
   end
 
 
