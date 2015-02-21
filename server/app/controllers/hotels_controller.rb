@@ -1,19 +1,18 @@
 class HotelsController < ApplicationController
+  before_action :set_state
   def show
-    @state = State.find_by_slug(params[:state_id])
     @hotel = Hotel.find params[:id]
   end
 
   def index
-    @state = State.find_by_slug(params[:state_id])
     @hotels = @state.hotels
+    @jsonarray = ["Hotels", @state.hotels.as_json]
     respond_to do |format|
-      format.json { render json: @state.hotels.to_json }
+      format.json { render json: JSON.pretty_generate(@jsonarray) }
     end
   end
 
   def create
-    @state = State.find_by_slug(params[:state_id])
     @hotel = @state.hotels.new hotel_params
     if @hotel.save
       respond_to do |format|
@@ -37,6 +36,10 @@ class HotelsController < ApplicationController
         format.json { render json: @hotel.errors.full_messages, status: 422}
       end
     end
+  end
+
+  def set_state
+    @state = State.find_by_slug(params[:state_id])
   end
   
 

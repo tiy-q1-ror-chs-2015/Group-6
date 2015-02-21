@@ -1,19 +1,18 @@
 class RestaurantsController < ApplicationController
+  before_action :set_state, except: [:update]
   def show
-    @state = State.find_by_slug(params[:state_id])
     @restaurant = Restaurant.find params[:id]
   end
 
   def index
-    @state = State.find_by_slug(params[:state_id])
     @restaurants = @state.restaurants
+    @jsonarray = ["Restaurants", @state.restaurants.as_json]
     respond_to do |format|
-      format.json { render json: @state.restaurants.to_json }
+      format.json { render json: JSON.pretty_generate(@jsonarray)}
     end
   end
 
   def create
-    @state = State.find_by_slug(params[:state_id])
     @restaurant = @state.restaurants.new restaurant_params
     if @restaurant.save
       respond_to do |format|
@@ -39,6 +38,9 @@ class RestaurantsController < ApplicationController
     end
   end
   
+  def set_state
+    @state = State.find_by_slug(params[:state_id])
+  end
 
   private
   def restaurant_params
