@@ -88,13 +88,13 @@
 
 }
 
-.formmm {
+.form {
     z-index: 3;
     position: absolute;
     color: white;
 }
 
-.cat {
+.comments {
     color: black;
     margin-top: 270px;
     margin-left: 15px;
