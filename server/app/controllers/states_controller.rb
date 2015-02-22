@@ -28,5 +28,4 @@ class StatesController < ApplicationController
       :slug,
       )
   end
-
 end
