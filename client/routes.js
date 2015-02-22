@@ -1,4 +1,6 @@
-  var Router = Backbone.Router.extend({
+  var AppRouter = Backbone.Router.extend({
+    initialize: function() {
+    },
     routes: {
       'state': 'state'
       'test': 'test'

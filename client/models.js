@@ -1,33 +1,43 @@
 //State Model
 
 var State = Backbone.Model.extend({
-  //template: _.template($('stateTmpl').html()),
-  //tagName: 'article'
-  urlRoot:'http://localhost:9000/states',
-  idAttributes: 'id',
-  defaults: function(){
-    return{
-      name: "state.name",
-      attraction: 'state.attractions',
-      restaurant: 'state.restaurants',
-      hotel: 'state.hotels',
-    };
-  },
-    initialize: function () {
-      console.log("state has been initialized!");
-    {
-  })
-    toJSON: function () {
-      return {state: this.attributes}
-    }
-  });
+  urlRoot: 'http://localhost:9000/states.json',
+  initialize:function(){
+    console.log('state model init');
+  }
+});
+
+
+
+//
+// var State = Backbone.Model.extend({
+//   //template: _.template($('stateTmpl').html()),
+//   //tagName: 'article'
+//   urlRoot:'http://localhost:9000/states',
+//   // idAttributes: 'id',
+//   defaults: function(){
+//     return{
+//       name: '',
+//   //     attraction: 'state.attractions',
+//   //     restaurant: 'state.restaurants',
+//   //     hotel: 'state.hotels',
+//   //   };
+//   },
+//   //   initialize: function () {
+//   //     console.log("state has been initialized!");
+//   //   {
+//   // })
+//   //   toJSON: function () {
+//   //     return {state: this.attributes}
+//   //   }
+//   });
 
   //Attraction Model
   var AttractionModel = Backbone.Model.extend({
     //template: _.template($('attractionTmpl').html()),
     //tagName: 'article'
     urlRoot: 'http://localhost:9000/states/attraction',
-    idAttraction: 'id'
+    idAttraction: 'id',
     defaults: function() {
       return {
       name: 'state.attractions',
@@ -48,7 +58,7 @@ var Restaurant = Backbone.Model.extend({
   //template: _.template($('stateTmpl').html()),
   //tagName: 'article'
     urlRoot: 'http://localhost:9000/states/attraction',
-    idAttraction: 'id'
+    idAttraction: 'id',
     defaults: function() {
       return {
         name: 'state.restaurants',
@@ -65,7 +75,7 @@ var Hotel = Backbone.Model.extend({
   //template: _.template($('stateTmpl').html()),
   //tagName: 'article'
   urlRoot: 'http://localhost:9000/hotels',
-  defaults function() {
+  defaults: function() {
     return{
       name: 'state.hotels',
       city: 'state.hotels.city',
