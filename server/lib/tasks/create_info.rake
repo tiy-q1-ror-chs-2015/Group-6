@@ -1,5 +1,5 @@
 task create_info: :environment do 
-  states = (1..50).step(1).to_a
+  states = (1..50).to_a
 
   states.each do |state|  
     Attraction.create!({
