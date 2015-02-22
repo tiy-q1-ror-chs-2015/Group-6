@@ -51,6 +51,6 @@
              "Wyoming" ] 
 
     states.each do |state|
-      State.create( name: state)
+      State.create( name: state, slug: state)
     end 
 end
