@@ -5,6 +5,9 @@ class StatesController < ApplicationController
 
   def show
     @state = State.find_by_slug(params[:id])
+    @attraction = @state.attractions
+    @hotel = @state.hotels
+    @restaurant = @state.restaurants
   end
 
   private
