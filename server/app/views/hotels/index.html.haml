@@ -1,0 +1,11 @@
+%h3 Hotels
+
+
+%ul
+-@hotels.each do |hotel|
+  %li
+  =hotel.name
+  =hotel.city
+  =hotel.cost
+  =hotel.rating
+  = link_to "More Information", state_hotels_path(@state,hotel)

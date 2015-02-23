@@ -1,0 +1,11 @@
+%h3 Restaurants
+
+
+%ul
+-@restaurants.each do |restaurant|
+  %li
+  =restaurant.name
+  =restaurant.city
+  =restaurant.cost
+  =restaurant.rating
+  = link_to "More Information", state_restaurants_path(@state,restaurant)
