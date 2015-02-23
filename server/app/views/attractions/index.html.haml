@@ -1,0 +1,11 @@
+%h3 Attractions
+
+
+%ul
+-@attractions.each do |attraction|
+  %li
+  =attraction.name
+  =attraction.city
+  =attraction.cost
+  =attraction.rating
+  = link_to "More Information", state_attractions_path(@state,attraction)
