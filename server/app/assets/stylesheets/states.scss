@@ -1,3 +1,41 @@
-// Place all the styles related to the states controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.icon-1 {
+  background-image: url("attractions.jpg");
+  background-image: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.icon-2 {
+  background-image: url("hotel.jpg");
+  background-image: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.icon-3 {
+  background-image: url("food.jpg");
+  background-image: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.jumbotron-states {
+  background-image: url("states.jpg");
+  background-image: no-repeat;
+  background-size: cover;
+  background-position: 100% 65%;
+  padding: 150px 15px;
+  margin-bottom: 30px;
+  color: inherit;
+  border-radius: 5px;
+}

@@ -1,0 +1,114 @@
+.container
+  .row
+    .col-md-12
+      .jumbotron-states
+.container
+  .row
+    .col-md-12.text-center
+      %h1
+        = @state.name
+
+.container
+  .row
+    .col-md-4
+      .icon-1
+      %h3
+        Attractions
+      - @state.attractions.each do |attraction|
+        %br
+        %strong
+          Name:
+        = attraction.name
+        %br
+        %strong
+          City:
+        = attraction.city
+        %br
+        %strong
+          Info:
+        = attraction.tag
+        %br
+        %strong
+          Cost:
+        = attraction.cost
+        %br
+        %strong
+          Rating:
+        = attraction.rating
+        %br
+        %strong
+          Address:
+        = attraction.address
+        %br
+        %strong
+          Phone Number:
+        = attraction.phone_number
+        %br
+    .col-md-4
+      .icon-2
+      %h3
+        Hotels
+      - @state.hotels.each do |hotel|
+        %br
+        %strong
+          Name:
+        = hotel.name
+        %br
+        %strong
+          City:
+        = hotel.city
+        %br
+        %strong
+          Info:
+        = hotel.tag
+        %br
+        %strong
+          Cost:
+        = hotel.cost
+        %br
+        %strong
+          Rating:
+        = hotel.rating
+        %br
+        %strong
+          Address:
+        = hotel.address
+        %br
+        %strong
+          Phone Number:
+        = hotel.phone_number
+        %br
+    .col-md-4
+      .icon-3
+      %h3
+        Restaurants
+      - @state.restaurants.each do |restaurant|
+        %br
+        %strong
+          Name:
+        = restaurant.name
+        %br
+        %strong
+          City:
+        = restaurant.city
+        %br
+        %strong
+          Info:
+        = restaurant.tag
+        %br
+        %strong
+          Cost:
+        = restaurant.cost
+        %br
+        %strong
+          Rating:
+        = restaurant.rating
+        %br
+        %strong
+          Address:
+        = restaurant.address
+        %br
+        %strong
+          Phone Number:
+        = restaurant.phone_number
+        %br
