@@ -1,6 +1,6 @@
 
   var StateCollection = Backbone.Collection.extend({
-    url: 'http://localhost:9000/#states',
+    url: 'http://localhost:9000/states',
     initialize: function () {
       console.log("State collection started");
    }
